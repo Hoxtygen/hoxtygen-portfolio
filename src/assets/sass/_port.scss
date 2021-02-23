@@ -14,10 +14,33 @@ h6 {
   color: #223b40;
 }
 
+a {
+  text-decoration: none;
+  color: #f7f7f7;
+}
+
 ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+nav {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-around;
+
+  .nav-link {
+    display: block;
+    color: #fff;
+    padding: 0.5rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    &:hover {
+      color: #1bac91;
+    }
+  }
 }
 
 .container {
@@ -35,10 +58,11 @@ section {
 
 #hero {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
-    url("../images/hero-bg.jpg");
+    url("https://res.cloudinary.com/dh3jxarvg/image/upload/v1614037303/hero-bg.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: hsl(0, 0%, 95%);
 }
 
 .hero-body {
@@ -155,11 +179,10 @@ section {
   }
 }
 
-.project-title  {
+.project-title {
   text-align: center;
   font-size: 1.5rem;
   margin: 1rem 0;
-
 
   @media (min-width: 600px) {
     text-align: left;
@@ -205,4 +228,9 @@ footer {
 
 .github {
   color: #333;
+}
+
+.nav-active {
+  border-bottom: 3px solid #1bac91;
+  color: yellow;
 }
