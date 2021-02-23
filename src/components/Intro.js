@@ -15,15 +15,15 @@ const Intro = () => {
                 constantly experimenting with new technologies and techniques. I
                 am very passionate about Web Development, and strive to better
                 myself as a developer, and the development community as a whole.
-                <p>
-                  In my free time, when I'm not learning about software
-                  development, I make a meal of crime fiction. As an undergrad,
-                  I was knee-deep into Robin Cook, accidentally bumped into
-                  Jefferey Deaver after varsity (The Devils Teardrop still my
-                  favorite), and haven't looked back. Can someone please tell
-                  Sir Arthur Conan Doyle he can write from the grave, the
-                  Sherlock Holmes series needs to continue.
-                </p>
+              </p>
+              <p>
+                In my free time, when I'm not learning about software
+                development, I make a meal of crime fiction. As an undergrad, I
+                was knee-deep into Robin Cook, accidentally bumped into Jefferey
+                Deaver after varsity (The Devils Teardrop still my favorite),
+                and haven't looked back. Can someone please tell Sir Arthur
+                Conan Doyle he can write from the grave, the Sherlock Holmes
+                series needs to continue.
               </p>
             </div>
           </Grid>
