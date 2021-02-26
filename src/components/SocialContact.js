@@ -10,19 +10,19 @@ const SocialContact = () => {
         <h2>Social Media</h2>
       </div>
       <div className="social-item">
-        <a className="twitter" href="https://twitter.com/Hoxtygen">
+        <a  target = "_blank" rel = "noreferrer noopener" className="twitter" href="https://twitter.com/Hoxtygen">
           <span>
             <TwitterIcon />
           </span>
           Twitter
         </a>
-        <a className="github" href="https://github.com/Hoxtygen">
+        <a  target = "_blank" rel = "noreferrer noopener" className="github" href="https://github.com/Hoxtygen">
           <span>
             <GitHubIcon />
           </span>
           Github
         </a>
-        <a className="linkedin" href="https://www.linkedin.com/in/wasiu-idowu/">
+        <a target = "_blank" rel = "noreferrer noopener"  className="linkedin" href="https://www.linkedin.com/in/wasiu-idowu/">
           <span>
             <LinkedInIcon />
           </span>
