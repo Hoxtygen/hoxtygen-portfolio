@@ -21,9 +21,8 @@ const Intro = () => {
                 development, I make a meal of crime fiction. As an undergrad, I
                 was knee-deep into Robin Cook, accidentally bumped into Jefferey
                 Deaver after varsity (The Devils Teardrop still my favorite),
-                and haven't looked back. Can someone please tell Sir Arthur
-                Conan Doyle he can write from the grave, the Sherlock Holmes
-                series needs to continue.
+                and haven't looked back. How I wish  Sir Arthur
+                Conan Doyle can write from the grave.
               </p>
             </div>
           </Grid>
