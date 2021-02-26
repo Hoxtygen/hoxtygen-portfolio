@@ -11,7 +11,7 @@ const Header = () => {
           <Typography variant="h4" className = {classes.typo}>Wasiu</Typography>
           <nav>
             <NavLink exact activeClassName = "nav-active" className = "nav-link" to="/">Home</NavLink>
-            {/* <NavLink activeClassName = "nav-active" className = "nav-link" to="/contact">Contact</NavLink> */}
+            <NavLink activeClassName = "nav-active" className = "nav-link" to="/contact">Contact</NavLink>
           </nav>
         </Toolbar>
       </AppBar>
