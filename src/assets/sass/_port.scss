@@ -198,11 +198,15 @@ section {
   text-transform: uppercase;
   font-size: 0.7rem;
 }
+
+#contact  {
+  min-height: 75vh;
+  padding-top: 10px;
+}
 .contact-form {
   max-width: 500px;
   margin: 0 auto;
   padding: 1rem;
-  // background: #1bac91;
 }
 
 .contact-title {
@@ -210,6 +214,7 @@ section {
   text-transform: none;
   font-weight: normal;
   color: #222;
+  padding: 1rem 0;
 }
 
 .social-contact {
