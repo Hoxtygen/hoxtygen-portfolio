@@ -28,7 +28,6 @@ const Contact = () => {
     axios
       .post("https://hoxtygen-portfolio-server.herokuapp.com/api/form", values)
       .then((result) => {
-        console.log(result.data);
         setResponse(result.data.message);
         setOpen(true);
       })
@@ -78,7 +77,7 @@ const Contact = () => {
           autoHideDuration={6000}
         >
           <Alert onClose={handleClose} severity="success">
-            <Typography className={classes.Alert}>{`${response}`}</Typography>
+            <Typography className={classes.Alert}>{`Thank you. ${response}`}</Typography>
           </Alert>
         </Snackbar>
       ) : null}
