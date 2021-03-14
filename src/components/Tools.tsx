@@ -19,9 +19,7 @@ const Tools = () => {
                 <li>Terminal</li>
                 <li>Azure board</li>
                 <li>Heroku</li>
-                {/* <li>Slack</li>
-                <li>Microsoft Teams</li>
-                <li>Zoom</li> */}
+                
               </ul>
             </div>
           </Grid>
