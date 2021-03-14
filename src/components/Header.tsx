@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, Typography, makeStyles } from "@material-ui/core";
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const classes = useStyles();
@@ -24,7 +24,6 @@ export default Header;
 
 const useStyles = makeStyles(() => ({
   header: {
-    // background: "#318a74"d
     background: "#222",
     color: "#fff",
   },

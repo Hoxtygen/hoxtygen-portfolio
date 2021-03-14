@@ -5,26 +5,28 @@ import Header from "../components/Header";
 import axios from "axios";
 import { Grid, Typography } from "@material-ui/core";
 import SocialContact from "../components/SocialContact";
-import MuiAlert from "@material-ui/lab/Alert";
+import MuiAlert, { AlertProps } from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
 import { makeStyles } from "@material-ui/core/styles";
+import { FormValues } from "../interfaces/interface";
 
 const Contact = () => {
   const classes = useStyles();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen]: [boolean, (open: boolean) => void] = useState<boolean>(
+    false
+  );
   const [errorOpen, setErrorOpen] = useState(false);
-  const [response, setResponse] = useState("");
-  const [error, setError] = useState(null);
+  const [response, setResponse]: [string, (error: string) => void] = useState(
+    ""
+  );
+  const [error, setError]: [string, (error: string) => void] = useState("");
 
-  const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
-
+  const handleClose = () => {
     setOpen(false);
     setErrorOpen(false);
   };
-  const handleSubmit = (values) => {
+
+  const handleSubmit = (values: FormValues): void => {
     axios
       .post("https://hoxtygen-portfolio-server.herokuapp.com/api/form", values)
       .then((result) => {
@@ -44,24 +46,21 @@ const Contact = () => {
   return (
     <>
       <Header />
+
       <main>
         <section id="contact">
           <div className="container">
             <Grid container>
-              <Grid item lg={12} md = {12} sm = {12} xs = {12}>
+              <Grid item lg={12} md={12} sm={12} xs={12}>
                 <h2 className="contact-title">
                   Thanks for taking the time to reach out.
                 </h2>
               </Grid>
-              <Grid item lg={6} md = {6} xs={12}>
+              <Grid item lg={6} md={6} xs={12}>
                 <SocialContact />
               </Grid>
-              <Grid item lg={6} md = {6} xs={12}>
-                <ContactForm
-                  handleSubmit={handleSubmit}
-                  error={error}
-                  response={response}
-                />
+              <Grid item lg={6} md={6} xs={12}>
+                <ContactForm handleSubmit={handleSubmit} />
               </Grid>
             </Grid>
           </div>
@@ -77,7 +76,9 @@ const Contact = () => {
           autoHideDuration={6000}
         >
           <Alert onClose={handleClose} severity="success">
-            <Typography className={classes.Alert}>{`Thank you. ${response}`}</Typography>
+            <Typography
+              className={classes.Alert}
+            >{`Thank you. ${response}`}</Typography>
           </Alert>
         </Snackbar>
       ) : null}
@@ -90,6 +91,7 @@ const Contact = () => {
           }}
           open={errorOpen}
           autoHideDuration={6000}
+          onClose={handleClose}
         >
           <Alert onClose={handleClose} severity="error">
             <Typography className={classes.Alert}>{`${error}`}</Typography>
@@ -103,7 +105,7 @@ const Contact = () => {
 
 export default Contact;
 
-const Alert = (props) => {
+const Alert = (props: AlertProps) => {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 };
 

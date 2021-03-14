@@ -1,6 +1,5 @@
 import { Grid } from "@material-ui/core";
 import React from "react";
-import Avatar from "../assets/images/mf-avatar.svg";
 
 const Hero = () => {
   return (
